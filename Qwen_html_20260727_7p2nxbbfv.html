@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snack Baraka - Saveurs et Convivialité</title>
+    <style>
+        /* --- RESET & BASE --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f9f9f9; color: #333; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+
+        /* --- HEADER & NAV --- */
+        header { background-color: #2c3e50; color: white; padding: 15px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .logo { font-size: 1.8rem; font-weight: bold; color: #e67e22; }
+        .nav-links { display: flex; gap: 25px; }
+        .nav-links a:hover { color: #e67e22; }
+
+        /* --- HERO SECTION --- */
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover; 
+            height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; padding: 20px;
+        }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 15px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .hero p { font-size: 1.3rem; margin-bottom: 30px; max-width: 600px; }
+        .btn { background-color: #e67e22; color: white; padding: 15px 35px; border-radius: 50px; font-size: 1.1rem; font-weight: bold; transition: 0.3s; border: none; cursor: pointer; }
+        .btn:hover { background-color: #d35400; transform: translateY(-2px); }
+
+        /* --- MENU SECTION --- */
+        .section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; font-size: 2.5rem; color: #2c3e50; margin-bottom: 50px; position: relative; }
+        .section-title::after { content: ''; display: block; width: 80px; height: 4px; background: #e67e22; margin: 15px auto; border-radius: 2px; }
+        
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .menu-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s; }
+        .menu-card:hover { transform: translateY(-10px); }
+        .menu-card img { width: 100%; height: 200px; object-fit: cover; }
+        .menu-card-body { padding: 20px; }
+        .menu-card h3 { color: #2c3e50; margin-bottom: 10px; font-size: 1.4rem; }
+        .menu-card p { color: #666; margin-bottom: 15px; }
+        .price { font-size: 1.2rem; font-weight: bold; color: #e67e22; }
+
+        /* --- INFO & FOOTER --- */
+        .info-section { background-color: #2c3e50; color: white; text-align: center; padding: 60px 20px; }
+        .info-grid { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 30px; max-width: 1000px; margin: 0 auto; }
+        .info-box h3 { color: #e67e22; margin-bottom: 10px; }
+        
+        footer { background-color: #1a252f; color: #aaa; text-align: center; padding: 20px; font-size: 0.9rem; }
+
+        /* --- MOBILE --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { gap: 15px; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo">🍔 Snack Baraka</div>
+            <div class="nav-links">
+                <a href="#menu">Menu</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO (Accueil) -->
+    <section class="hero">
+        <h1>Bienvenue au Snack Baraka</h1>
+        <p>Des saveurs authentiques, des produits frais et une bonne humeur contagieuse. Venez goûter à la différence !</p>
+        <a href="#menu" class="btn">Découvrir le Menu</a>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu" class="section">
+        <h2 class="section-title">Nos Spécialités</h2>
+        <div class="menu-grid">
+            <!-- Carte 1 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Burger Baraka">
+                <div class="menu-card-body">
+                    <h3>Le Baraka Burger</h3>
+                    <p>Steak haché frais, cheddar fondant, sauce secrète maison et salade croquante.</p>
+                    <span class="price">8.50 €</span>
+                </div>
+            </div>
+            <!-- Carte 2 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Tacos">
+                <div class="menu-card-body">
+                    <h3>Tacos Géant</h3>
+                    <p>Poulet mariné, frites croustillantes, fromage fondu et sauce algérienne.</p>
+                    <span class="price">9.00 €</span>
+                </div>
+            </div>
+            <!-- Carte 3 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pizza">
+                <div class="menu-card-body">
+                    <h3>Pizza Margherita</h3>
+                    <p>Base tomate, mozzarella di bufala, basilic frais et un filet d'huile d'olive.</p>
+                    <span class="price">7.50 €</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFOS PRATIQUES -->
+    <section id="contact" class="info-section">
+        <h2 class="section-title" style="color: white;">Nous Trouver</h2>
+        <div class="info-grid">
+            <div class="info-box">
+                <h3>📍 Adresse</h3>
+                <p>123 Rue de la Gourmandise<br>75000 Votre Ville</p>
+            </div>
+            <div class="info-box">
+                <h3>🕒 Horaires</h3>
+                <p>Lun - Dim : 11h00 - 23h00<br>Non-stop</p>
+            </div>
+            <div class="info-box">
+                <h3>📞 Contact</h3>
+                <p>01 23 45 67 89<br>contact@snackbaraka.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Snack Baraka. Tous droits réservés. | Fait avec ❤️ et de bonnes frites.</p>
+    </footer>
+
+</body>
+</html>
